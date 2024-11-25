@@ -24,6 +24,7 @@ function randomNumber(length) {
   let number = Math.floor(Math.random() * length);
   return number;
 }
+
 function getString(array) {
   let length = array.length;
   let random = randomNumber(length);
