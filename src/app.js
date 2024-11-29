@@ -5,6 +5,10 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+window.onload = function() {
+  loadExcuse();
+};
+
 let who = ["The dog", "My grandma", "The mailman", "My bird"];
 let action = ["ate", "peed", "crushed", "broke"];
 let what = ["my homework", "my phone", "the car"];
@@ -16,18 +20,14 @@ let when = [
   "while I was praying"
 ];
 
-window.onload = function() {
-  loadExcuse();
-};
-
-function randomNumber(length) {
-  let number = Math.floor(Math.random() * length);
+function randomIndex(arraylength) {
+  let number = Math.floor(Math.random() * arraylength);
   return number;
 }
 
 function getString(array) {
   let length = array.length;
-  let random = randomNumber(length);
+  let random = randomIndex(length);
   let string = array[random];
   return string;
 }
